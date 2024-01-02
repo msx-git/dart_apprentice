@@ -32,11 +32,8 @@ abstract class NoteRepository {
   factory NoteRepository() => FakeNoteRepository();
 
   List<Note> getAllNotes();
-
   Note? getNoteById(int id);
-
   void addNote(Note note);
-
   void deleteNote(int id);
 }
 
