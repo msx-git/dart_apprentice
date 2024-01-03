@@ -1,3 +1,5 @@
+import '../6. Mixins/1_mixins.dart';
+
 void main() {
   // This is error.
   // Wev can’t create an object from an abstract class
@@ -11,7 +13,7 @@ void main() {
   print(platypus);
 }
 
-abstract class Animal {
+abstract class Animal with EggLayer {
   bool isAlive = true;
 
   void eat();
@@ -24,7 +26,7 @@ abstract class Animal {
   }
 }
 
-class Platypus extends Animal {
+class Platypus extends Animal{
   @override
   void eat() {
     // TODO: implement eat
@@ -35,9 +37,5 @@ class Platypus extends Animal {
   void move() {
     // TODO: implement move
     print('Glide glide');
-  }
-
-  void layEggs() {
-    print('Plop plop');
   }
 }
